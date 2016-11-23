@@ -12,7 +12,25 @@
 		8391D46F1DE649080001F2C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8391D46D1DE649080001F2C8 /* Main.storyboard */; };
 		8391D4711DE649080001F2C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8391D4701DE649080001F2C8 /* Assets.xcassets */; };
 		8391D4741DE649080001F2C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8391D4721DE649080001F2C8 /* LaunchScreen.storyboard */; };
+		8391D47D1DE657CE0001F2C8 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8391D47C1DE657CE0001F2C8 /* SQLite.framework */; };
+		8391D47E1DE657D60001F2C8 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8391D47C1DE657CE0001F2C8 /* SQLite.framework */; };
+		8391D47F1DE657D60001F2C8 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8391D47C1DE657CE0001F2C8 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8391D4821DE65C9E0001F2C8 /* TaskCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391D4811DE65C9E0001F2C8 /* TaskCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8391D4801DE657D60001F2C8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8391D47F1DE657D60001F2C8 /* SQLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8391D4661DE649080001F2C8 /* chrisras-pset4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "chrisras-pset4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +40,8 @@
 		8391D4701DE649080001F2C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8391D4731DE649080001F2C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8391D4751DE649080001F2C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8391D47C1DE657CE0001F2C8 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
+		8391D4811DE65C9E0001F2C8 /* TaskCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8391D47E1DE657D60001F2C8 /* SQLite.framework in Frameworks */,
+				8391D47D1DE657CE0001F2C8 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +62,7 @@
 			children = (
 				8391D4681DE649080001F2C8 /* chrisras-pset4 */,
 				8391D4671DE649080001F2C8 /* Products */,
+				8391D47B1DE657CE0001F2C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +83,17 @@
 				8391D4701DE649080001F2C8 /* Assets.xcassets */,
 				8391D4721DE649080001F2C8 /* LaunchScreen.storyboard */,
 				8391D4751DE649080001F2C8 /* Info.plist */,
+				8391D4811DE65C9E0001F2C8 /* TaskCellTableViewCell.swift */,
 			);
 			path = "chrisras-pset4";
+			sourceTree = "<group>";
+		};
+		8391D47B1DE657CE0001F2C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8391D47C1DE657CE0001F2C8 /* SQLite.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +106,7 @@
 				8391D4621DE649080001F2C8 /* Sources */,
 				8391D4631DE649080001F2C8 /* Frameworks */,
 				8391D4641DE649080001F2C8 /* Resources */,
+				8391D4801DE657D60001F2C8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8391D46C1DE649080001F2C8 /* ViewController.swift in Sources */,
+				8391D4821DE65C9E0001F2C8 /* TaskCellTableViewCell.swift in Sources */,
 				8391D46A1DE649080001F2C8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +294,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "chrisras-pset4/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.mprog.chrisras-pset4";
@@ -272,6 +310,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "chrisras-pset4/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.mprog.chrisras-pset4";
