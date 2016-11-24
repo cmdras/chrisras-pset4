@@ -73,6 +73,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             } catch {
                 print(error)
             }
+            taskTextField.text = ""
             tableView.reloadData()
         }
     }

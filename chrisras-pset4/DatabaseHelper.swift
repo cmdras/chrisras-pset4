@@ -42,7 +42,7 @@ class DatabaseHelper {
                 t in
                 
                 t.column(id, primaryKey: .autoincrement)
-                t.column(entry)
+                t.column(entry, unique: true)
             })
         } catch {
             throw error
@@ -52,8 +52,7 @@ class DatabaseHelper {
     func addToDB(entry: String) throws {
         let insert = tasks.insert(self.entry <- entry)
         do {
-            let rowId = try db!.run(insert)
-            print(rowId)
+            try db!.run(insert)
         } catch {
             throw error
         }
