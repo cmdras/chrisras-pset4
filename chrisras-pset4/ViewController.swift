@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var taskTextField: UITextField!
     
     var tasks = ["Lorem", "Ipsum", "Dolor"]
     override func viewDidLoad() {
@@ -33,6 +34,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell.taskLabel.text = tasks[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            tasks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+        }
+    }
+    
+    @IBAction func addTaskButton(_ sender: Any) {
+        if taskTextField.text != nil {
+            tasks.append(taskTextField.text!)
+            tableView.reloadData()
+        }
     }
 
 
