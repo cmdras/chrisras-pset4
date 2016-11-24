@@ -16,6 +16,7 @@
 		8391D47E1DE657D60001F2C8 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8391D47C1DE657CE0001F2C8 /* SQLite.framework */; };
 		8391D47F1DE657D60001F2C8 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8391D47C1DE657CE0001F2C8 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8391D4821DE65C9E0001F2C8 /* TaskCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391D4811DE65C9E0001F2C8 /* TaskCellTableViewCell.swift */; };
+		83D04BE11DE769A300C1F3F9 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D04BE01DE769A300C1F3F9 /* DatabaseHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,7 @@
 		8391D4751DE649080001F2C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8391D47C1DE657CE0001F2C8 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
 		8391D4811DE65C9E0001F2C8 /* TaskCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCellTableViewCell.swift; sourceTree = "<group>"; };
+		83D04BE01DE769A300C1F3F9 /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				8391D4721DE649080001F2C8 /* LaunchScreen.storyboard */,
 				8391D4751DE649080001F2C8 /* Info.plist */,
 				8391D4811DE65C9E0001F2C8 /* TaskCellTableViewCell.swift */,
+				83D04BE01DE769A300C1F3F9 /* DatabaseHelper.swift */,
 			);
 			path = "chrisras-pset4";
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83D04BE11DE769A300C1F3F9 /* DatabaseHelper.swift in Sources */,
 				8391D46C1DE649080001F2C8 /* ViewController.swift in Sources */,
 				8391D4821DE65C9E0001F2C8 /* TaskCellTableViewCell.swift in Sources */,
 				8391D46A1DE649080001F2C8 /* AppDelegate.swift in Sources */,
@@ -341,6 +345,7 @@
 				8391D47A1DE649080001F2C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
